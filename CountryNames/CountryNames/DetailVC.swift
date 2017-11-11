@@ -22,16 +22,28 @@ struct CountryNames : Decodable{
 
 
 class DetailVC: UIViewController {
+    
     @IBOutlet weak var countryNameLabel: UILabel!
     
     var countries = [CountryNames]()
     
     var sentData1: String!
-
+    var sentData2: String!
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if let sentData2 = sentData2{
+            countryNameLabel.text = sentData2
+        }
+        
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
-     // Test
+   
        
         let jsonURL = "https://restcountries.eu/rest/v2/all"
         let url = URL(string: jsonURL)

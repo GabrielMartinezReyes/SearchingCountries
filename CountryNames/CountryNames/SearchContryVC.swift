@@ -15,6 +15,7 @@ class SearchContryVC: UIViewController, UITableViewDataSource, UISearchBarDelega
     @IBOutlet weak var countryTableView: UITableView!
     
     var fetchedCountry = [Country]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -115,6 +116,7 @@ class SearchContryVC: UIViewController, UITableViewDataSource, UISearchBarDelega
                
                
                 detailVC.sentData1 = fetchedCountry[indexPath.row].country
+                detailVC.sentData2 = fetchedCountry[indexPath.row].country
                
             }
             
