@@ -16,6 +16,9 @@ class SearchContryVC: UIViewController, UITableViewDataSource, UISearchBarDelega
     
     var fetchedCountry = [Country]()
     
+  
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -89,8 +92,16 @@ class SearchContryVC: UIViewController, UITableViewDataSource, UISearchBarDelega
                     for eachFetchedCountry in fetchedData{
                         let eachCountry = eachFetchedCountry as! [String : Any]
                         let country = eachCountry["name"] as! String
+                        let nativeName = eachCountry["nativeName"] as! String
+                        let regionName = eachCountry["region"] as! String
+                        let capitalName = eachCountry["capital"] as! String
+                      
+                       
+                      
+                       
                         
-                        self.fetchedCountry.append(Country(country: country))
+                        self.fetchedCountry.append(Country(country: country, nativeName: nativeName, region: regionName, capital: capitalName))
+                        
                     }
 
                 self.countryTableView.reloadData()
@@ -117,7 +128,10 @@ class SearchContryVC: UIViewController, UITableViewDataSource, UISearchBarDelega
                
                 detailVC.sentData1 = fetchedCountry[indexPath.row].country
                 detailVC.sentData2 = fetchedCountry[indexPath.row].country
-               
+                detailVC.sentData3 = fetchedCountry[indexPath.row].nativeName
+                detailVC.sentData4 = fetchedCountry[indexPath.row].region
+                detailVC.sentData5 = fetchedCountry[indexPath.row].capital
+                
             }
             
             
@@ -132,12 +146,31 @@ class SearchContryVC: UIViewController, UITableViewDataSource, UISearchBarDelega
 class Country{
     
     var country: String
+    var nativeName: String
+    var region: String
+    var capital: String
+   
+   
+   
+ 
+  
+ 
     
-    init(country: String) {
+    
+    init(country: String, nativeName: String, region: String, capital: String) {
+       
         self.country = country
+        self.nativeName = nativeName
+        self.region = region
+        self.capital = capital
+       
+     
+        
+    
+      
+       
+      
+       
     }
-    
-    
-    
 }
 

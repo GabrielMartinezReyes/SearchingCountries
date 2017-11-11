@@ -8,27 +8,31 @@
 
 import UIKit
 
-struct CountryNames : Decodable{
-    let name : String
-    //let nativeName : String
-    let region : String
-    let capital : String
-//    let area : String
-//    let languages : String
-//    let translations :  String
-//
-    
-}
-
-
 class DetailVC: UIViewController {
     
     @IBOutlet weak var countryNameLabel: UILabel!
+    @IBOutlet weak var nativeNameLabel: UILabel!
+    @IBOutlet weak var regionLabel: UILabel!
+    @IBOutlet weak var capitalLabel: UILabel!
+    @IBOutlet weak var areaLabel: UILabel!
+    @IBOutlet weak var languageLabel: UILabel!
+    @IBOutlet weak var translateLabel: UILabel!
+    @IBOutlet weak var flagImageView: UIImageView!
     
-    var countries = [CountryNames]()
+    
+    
+    
+  
     
     var sentData1: String!
     var sentData2: String!
+    var sentData3: String!
+    var sentData4: String!
+    var sentData5: String!
+    var sentData6: String!
+   
+   
+
     
     
     override func viewWillAppear(_ animated: Bool) {
@@ -38,6 +42,22 @@ class DetailVC: UIViewController {
             countryNameLabel.text = sentData2
         }
         
+        if let sentData3 = sentData3{
+            
+            nativeNameLabel.text = sentData3
+        }
+        
+        if let sentData4 = sentData4{
+            
+            regionLabel.text = sentData4
+        }
+        if let sentData5 = sentData5{
+            
+            capitalLabel.text = sentData5
+        }
+        
+    
+        
         
     }
     override func viewDidLoad() {
@@ -45,29 +65,7 @@ class DetailVC: UIViewController {
         
    
        
-        let jsonURL = "https://restcountries.eu/rest/v2/all"
-        let url = URL(string: jsonURL)
-        
-        URLSession.shared.dataTask(with: url!) { (data, response, error) in
-            
-            do{
-                self.countries = try JSONDecoder().decode([CountryNames].self, from: data!)
-                
-                for eachCountry in self.countries{
-                    print(eachCountry.name)
-                    
-                  
-                }
-            }
-            catch{
-                print("Error")
-            }
-            
-            
-            
-            
-            
-        }.resume()
+ 
         
         self.navigationItem.title = sentData1
         // Do any additional setup after loading the view.

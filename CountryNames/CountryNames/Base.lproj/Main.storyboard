@@ -77,13 +77,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="URX-6j-Zle">
-                                <rect key="frame" x="0.0" y="0.0" width="376" height="148"/>
+                                <rect key="frame" x="0.0" y="0.0" width="376" height="135.5"/>
                             </imageView>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Yg7-Fz-HPB">
-                                <rect key="frame" x="0.0" y="475" width="376" height="128"/>
+                                <rect key="frame" x="0.0" y="487.5" width="376" height="115.5"/>
                             </mapView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Xyr-uD-4XH">
-                                <rect key="frame" x="51" y="226" width="274" height="150"/>
+                                <rect key="frame" x="51" y="213.5" width="274" height="175"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dAR-gn-KPY">
                                         <rect key="frame" x="0.0" y="0.0" width="158.5" height="25"/>
@@ -156,8 +156,26 @@
                                             </label>
                                         </subviews>
                                     </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HTD-In-Ngv">
+                                        <rect key="frame" x="0.0" y="100" width="142.5" height="25"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Area" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vh3-HL-WeM">
+                                                <rect key="frame" x="0.0" y="0.0" width="38.5" height="25"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country area" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pS6-dl-PJe">
+                                                <rect key="frame" x="48.5" y="0.0" width="94" height="25"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <viewLayoutGuide key="safeArea" id="FIx-it-iyL"/>
+                                    </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0rV-1D-BaY">
-                                        <rect key="frame" x="0.0" y="100" width="225.5" height="25"/>
+                                        <rect key="frame" x="0.0" y="125" width="225.5" height="25"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Language:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4q-El-KmX">
                                                 <rect key="frame" x="0.0" y="0.0" width="85.5" height="25"/>
@@ -174,10 +192,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="GJG-0A-8Sz">
-                                        <rect key="frame" x="0.0" y="125" width="258.5" height="25"/>
+                                        <rect key="frame" x="0.0" y="150" width="259" height="25"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Translations:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kFZ-sH-REy">
-                                                <rect key="frame" x="0.0" y="0.0" width="102" height="25"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="102.5" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="102" id="4UK-Rm-Jyn"/>
                                                 </constraints>
@@ -186,7 +204,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country translations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Zz-Uc-5DN">
-                                                <rect key="frame" x="112" y="0.0" width="146.5" height="25"/>
+                                                <rect key="frame" x="112.5" y="0.0" width="146.5" height="25"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -212,7 +230,14 @@
                         <viewLayoutGuide key="safeArea" id="RGg-aM-bEo"/>
                     </view>
                     <connections>
+                        <outlet property="areaLabel" destination="pS6-dl-PJe" id="Bzy-5t-uP9"/>
+                        <outlet property="capitalLabel" destination="3OZ-C1-aEF" id="PDS-ij-5i8"/>
                         <outlet property="countryNameLabel" destination="5ZK-mo-Q1S" id="vtc-2r-3Eg"/>
+                        <outlet property="flagImageView" destination="URX-6j-Zle" id="fmR-ek-nZS"/>
+                        <outlet property="languageLabel" destination="hnw-f9-crh" id="DRA-fs-dde"/>
+                        <outlet property="nativeNameLabel" destination="87m-b6-9Z8" id="oJL-XW-w5n"/>
+                        <outlet property="regionLabel" destination="xxC-jv-4kp" id="eda-Uy-txs"/>
+                        <outlet property="translateLabel" destination="3Zz-Uc-5DN" id="5Af-YE-3c0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HZx-JQ-nbw" userLabel="First Responder" sceneMemberID="firstResponder"/>
