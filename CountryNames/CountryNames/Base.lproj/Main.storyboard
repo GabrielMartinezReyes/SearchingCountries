@@ -76,8 +76,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="URX-6j-Zle">
-                                <rect key="frame" x="0.0" y="0.0" width="376" height="135.5"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="URX-6j-Zle">
+                                <rect key="frame" x="0.0" y="0.0" width="376" height="140"/>
                             </imageView>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Yg7-Fz-HPB">
                                 <rect key="frame" x="0.0" y="487.5" width="376" height="115.5"/>
@@ -223,7 +223,7 @@
                             <constraint firstItem="Xyr-uD-4XH" firstAttribute="centerX" secondItem="URX-6j-Zle" secondAttribute="centerX" id="HQn-3R-G80"/>
                             <constraint firstItem="Yg7-Fz-HPB" firstAttribute="top" secondItem="Xyr-uD-4XH" secondAttribute="bottom" constant="99" id="Lsx-ha-r1j"/>
                             <constraint firstItem="Xyr-uD-4XH" firstAttribute="centerX" secondItem="dad-Xs-DHk" secondAttribute="centerX" id="Mcg-RF-qrg"/>
-                            <constraint firstItem="Xyr-uD-4XH" firstAttribute="top" secondItem="URX-6j-Zle" secondAttribute="bottom" constant="78" id="fQz-0d-RuV"/>
+                            <constraint firstItem="Xyr-uD-4XH" firstAttribute="top" secondItem="URX-6j-Zle" secondAttribute="bottom" constant="73.5" id="fQz-0d-RuV"/>
                             <constraint firstItem="URX-6j-Zle" firstAttribute="leading" secondItem="dad-Xs-DHk" secondAttribute="leading" id="gOC-kS-a46"/>
                             <constraint firstItem="URX-6j-Zle" firstAttribute="leading" secondItem="Yg7-Fz-HPB" secondAttribute="leading" id="vz4-o9-VNw"/>
                         </constraints>

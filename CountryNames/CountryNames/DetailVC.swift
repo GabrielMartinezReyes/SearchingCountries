@@ -30,6 +30,7 @@ class DetailVC: UIViewController {
     var sentData4: String!
     var sentData5: String!
     var sentData6: String!
+    
    
    
 
@@ -56,9 +57,11 @@ class DetailVC: UIViewController {
             capitalLabel.text = sentData5
         }
         
-    
-        
-        
+        if let sentData6 = sentData6{
+            flagImageView.image = UIImage(named: sentData6)
+            
+        }
+
     }
     override func viewDidLoad() {
         super.viewDidLoad()

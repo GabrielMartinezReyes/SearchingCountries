@@ -16,6 +16,7 @@ class SearchContryVC: UIViewController, UITableViewDataSource, UISearchBarDelega
     
     var fetchedCountry = [Country]()
     
+    
   
     
     
@@ -95,12 +96,15 @@ class SearchContryVC: UIViewController, UITableViewDataSource, UISearchBarDelega
                         let nativeName = eachCountry["nativeName"] as! String
                         let regionName = eachCountry["region"] as! String
                         let capitalName = eachCountry["capital"] as! String
+                        let flagImage = eachCountry["flag"] as! String
+                        
+                       
                       
                        
                       
                        
                         
-                        self.fetchedCountry.append(Country(country: country, nativeName: nativeName, region: regionName, capital: capitalName))
+                        self.fetchedCountry.append(Country(country: country, nativeName: nativeName, region: regionName, capital: capitalName, flag: flagImage))
                         
                     }
 
@@ -131,6 +135,9 @@ class SearchContryVC: UIViewController, UITableViewDataSource, UISearchBarDelega
                 detailVC.sentData3 = fetchedCountry[indexPath.row].nativeName
                 detailVC.sentData4 = fetchedCountry[indexPath.row].region
                 detailVC.sentData5 = fetchedCountry[indexPath.row].capital
+                detailVC.sentData6 = fetchedCountry[indexPath.row].flag
+                
+                
                 
             }
             
@@ -149,27 +156,18 @@ class Country{
     var nativeName: String
     var region: String
     var capital: String
-   
-   
-   
- 
-  
- 
+    var flag: String
     
     
-    init(country: String, nativeName: String, region: String, capital: String) {
+    
+    init(country: String, nativeName: String, region: String, capital: String, flag:String) {
        
         self.country = country
         self.nativeName = nativeName
         self.region = region
         self.capital = capital
-       
-     
+        self.flag = flag
         
-    
-      
-       
-      
        
     }
 }
